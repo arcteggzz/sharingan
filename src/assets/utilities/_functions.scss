@@ -1,0 +1,23 @@
+// This Functions Convert Pix value to Rem or Em
+// Example of using the function
+// with: pix-rem(20,em) -> em
+// height: pix-rem(10) -> rem by default
+
+@function pix-rem($value, $suffix: rem) {
+  $calculated: calc($value/16);
+  @return #{$calculated}#{$suffix};
+}
+
+// Example usage:
+// body {
+//   @include mediaQuery(1200px) {
+//     background-color: red
+//   }
+// }
+// This changes the body color to red at any screensize below 1200px
+
+@mixin mediaQuery($screen) {
+  @media (max-width: $screen) {
+    @content;
+  }
+}

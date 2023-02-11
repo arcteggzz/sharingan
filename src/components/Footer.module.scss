@@ -1,0 +1,14 @@
+@import "../assets/utilities/functions";
+@import "../assets/utilities/variables";
+
+.footer {
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  padding: 0 pix-rem(40) 0 0;
+  cursor: default;
+
+  p {
+    color: #a7c7e7;
+  }
+}

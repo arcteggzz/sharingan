@@ -1,0 +1,119 @@
+@import "../assets/utilities/functions";
+@import "../assets/utilities/variables";
+
+.GamePage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .timer {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 pix-rem(40) 0;
+    column-gap: pix-rem(60);
+  }
+
+  .section_container {
+    .instruction_section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: pix-rem(20);
+        color: $fontColorDark;
+        font-weight: 500;
+      }
+
+      button {
+        padding: pix-rem(12) pix-rem(128);
+        background: linear-gradient(135deg, $background-01, $background-02);
+        border: none;
+        outline: none;
+        color: white;
+        border-radius: 128px;
+        text-decoration: none;
+        margin: pix-rem(32) 0 0 0;
+        cursor: pointer;
+      }
+    }
+
+    .images_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: pix-rem(20);
+
+      .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: scale 0.15s ease-in-out;
+
+        .imgContainer {
+          background: white;
+          border-radius: 50%;
+          width: pix-rem(120);
+          height: pix-rem(120);
+          padding: 4px;
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+        .imgContainer:hover {
+          border: 4px red solid;
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .icon:hover {
+        scale: 1.05;
+      }
+
+      .icon_highlight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: scale 0.15s ease-in-out;
+        scale: 1.05;
+
+        .imgContainer_highlight {
+          background: white;
+          border-radius: 50%;
+          width: pix-rem(120);
+          height: pix-rem(120);
+          padding: 4px;
+
+          border: 4px blue solid;
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footerContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
